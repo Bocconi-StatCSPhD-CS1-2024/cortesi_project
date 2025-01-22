@@ -32,6 +32,7 @@ The code numerically solves the Fredholm integral equation of the second kind by
 Potential Improvements
 - Implement additional methods to compute weights for numerical integration, such as Gaussian quadrature or Simpson's rule, to provide more flexibility.
 - Add a plot of the solution F(x) or the kernel matrix.
+- Introduce parallel programming techniques to optimize the computation. This could significantly reduce runtime and improve performance.
 
 
 ### Examples of How to Run the Code
