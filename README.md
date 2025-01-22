@@ -3,10 +3,10 @@
 My project addresses the numerical solution of Fredholm integral equations of the second kind, which have the general form:
 f(x) = g(x) + λ ∫[a,b] K(x, t) f(t) dt
 where
-K(x,t) is the kernel function, representing the relationship between x and t
-g(x) is a known function,
-λ is a scalar parameter
-f(x) is the unknown function to be solved for.
+- K(x,t) is the kernel function, representing the relationship between x and t
+- g(x) is a known function,
+- λ is a scalar parameter
+- f(x) is the unknown function to be solved for.
 
 How Does the Fredholm Integral Equation Work?
 The unknown function f(x) depends on two components, a known part g(x), representing the direct influence on f(x), and a cumulative effect, which captures how all points t in the interval [a, b] influence x. The cumulative effect is given by a kernel function K(x, t), describing how much each point t influences x, and by an integral, summing up the contributions of all points t within the interval. The effect is scaled on the basis of a factor λ, which can either amplify or reduce it.
