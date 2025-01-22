@@ -4,7 +4,7 @@ My project addresses the numerical solution of Fredholm integral equations of th
 f(x) = g(x) + λ ∫[a,b] K(x, t) f(t) dt
 where
 - K(x,t) is the kernel function, representing the relationship between x and t
-- g(x) is a known function,
+- g(x) is a known function
 - λ is a scalar parameter
 - f(x) is the unknown function to be solved for.
 
@@ -40,19 +40,11 @@ To run the program, execute the main() function. The program will prompt you to 
 
 ## EXAMPLE 1- INPUT
 
-Enter the integration interval as two numbers separated by a space, for example: 0 1
-0 2
-Enter the value of lambda, for example: 0.5
-0.2
-Enter the number (integer) of discretization points, for example: 100
-4
-Enter the kernel K(x, t), for example: x * t
-Press Enter to use the default value: K(x, t) = x * t
-x + t
-Kernel K(x, t) defined successfully.
-Enter the function g(x), for example: x^2
-Press Enter to use the default value: g(x) = x^2
-x^3 + 1
+integration interval: 0 2
+lambda: 0.2
+number of discretization points: 4
+kernel: x + t
+g: x^3 + 1
 
 ## EXAMPLE 1 - OUTPUT
 
@@ -98,20 +90,11 @@ That's great!
 
 ## EXAMPLE 2 - INPUT
 
-Enter the integration interval as two numbers separated by a space, for example: 0 1
-0 1
-Enter the value of lambda, for example: 0.5
-0.5
-Enter the number (integer) of discretization points, for example: 100
-4
-Enter the kernel K(x, t), for example: x * t
-Press Enter to use the default value: K(x, t) = x * t
-[Pressed Enter]
-Default value used: K(x, t) = x * t
-Enter the function g(x), for example: x^2
-Press Enter to use the default value: g(x) = x^2
-[Pressed Enter]
-Default value used: g(x) = x^2
+integration interval: 0 1
+lambda: 0.5
+number of discretization points: 4
+kernel: x * t
+g: x^2
 
 ## EXAMPLE 2 - OUTPUT
 
