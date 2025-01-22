@@ -1,6 +1,12 @@
+# =====================================
+# Dependencies
+# =====================================
 using Printf
 using LinearAlgebra
 
+# =====================================
+# Input Functions
+# =====================================
 function get_kernel()
     println("Enter the kernel K(x, t), for example: x * t")
     println("Press Enter to use the default value: K(x, t) = x * t")
@@ -91,6 +97,9 @@ function get_points()
     end
 end
 
+# =====================================
+# Vector and Matrix Operations
+# =====================================
 function discretize_interval(a::Float64, b::Float64, n::Int)
     return collect(range(a, stop=b, length=n))
 end
@@ -119,6 +128,9 @@ function compute_g_vector(points::Vector{Float64}, g::Function)
     return [Base.invokelatest(g, x) for x in points]
 end
 
+# =====================================
+# Display Functions
+# =====================================
 function display_points(vector::Vector{Float64})
     l = length(vector)
     if l <= 10
@@ -137,6 +149,9 @@ function display_matrix(matrix::Matrix{Float64})
     end
 end
 
+# =====================================
+# Main
+# =====================================
 function main()
     # Get user inputs
     a, b = get_interval()
