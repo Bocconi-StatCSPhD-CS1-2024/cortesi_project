@@ -40,116 +40,117 @@ To run the program, execute the main() function. The program will prompt you to 
 
 ## EXAMPLE 1- INPUT
 
-Enter the integration interval as two numbers separated by a space (e.g., 0 1):
+Enter the integration interval as two numbers separated by a space, for example: 0 1
 0 2
-
-Enter the value of lambda (e.g., 0.5):
+Enter the value of lambda, for example: 0.5
 0.2
-
-Enter the number (integer) of points for discretization (e.g., 4):
+Enter the number (integer) of discretization points, for example: 100
 4
-
 Enter the kernel K(x, t), for example: x * t
 Press Enter to use the default value: K(x, t) = x * t
 x + t
-
-Enter the function g(x) (e.g., x^2):
+Kernel K(x, t) defined successfully.
+Enter the function g(x), for example: x^2
 Press Enter to use the default value: g(x) = x^2
 x^3 + 1
 
 ## EXAMPLE 1 - OUTPUT
 
-Discretized points of the interval (up to 10 elements):
-[0.0, 0.6667, 1.3333, 2.0]
+Function g(x) defined successfully.
 
-Kernel matrix (up to 5 x 5 elements):
+Discretized points of the interval (up to 10 elements shown):
+[0.0, 0.6666666666666666, 1.3333333333333333, 2.0]
+
+Kernel matrix (up to 5 x 5 elements shown):
 0.000  0.667  1.333  2.000
 0.667  1.333  2.000  2.667
 1.333  2.000  2.667  3.333
 2.000  2.667  3.333  4.000
 
-Weights vector (up to 10 elements):
-[0.3333, 0.6667, 0.6667, 0.3333]
+Weights vector (up to 10 elements shown):
+[0.3333333333333333, 0.6666666666666666, 0.6666666666666666, 0.3333333333333333]
 
-Weighted kernel matrix (up to 5 x 5 elements):
-0.000  0.222  0.444  0.667
-0.222  0.444  0.667  0.889
-0.444  0.667  0.889  1.111
-0.667  0.889  1.111  1.333
+Weighted kernel matrix (up to 5 x 5 elements shown):
+0.000  0.444  0.889  0.667
+0.222  0.889  1.333  0.889
+0.444  1.333  1.778  1.111
+0.667  1.778  2.222  1.333
 
-Scaled kernel matrix by λ (up to 5 x 5 elements):
-0.000  0.044  0.089  0.133
-0.044  0.089  0.133  0.178
-0.089  0.133  0.178  0.222
-0.133  0.178  0.222  0.267
+Scaled kernel matrix by λ (up to 5 x 5 elements shown):
+0.000  0.089  0.178  0.133
+0.044  0.178  0.267  0.178
+0.089  0.267  0.356  0.222
+0.133  0.356  0.444  0.267
 
-G vector (up to 10 elements):
-[1.0, 1.2963, 3.3704, 9.0]
+G vector (up to 10 elements shown):
+[1.0, 1.2962962962962963, 3.3703703703703702, 9.0]
 
-A matrix (up to 5 x 5 elements):
-1.000  -0.044  -0.089  -0.133
--0.044   0.911  -0.133  -0.178
--0.089  -0.133   0.822  -0.222
--0.133  -0.178  -0.222   0.733
+Matrix A (up to 5 x 5 elements shown):
+1.000  -0.089  -0.178  -0.133
+-0.044  0.822  -0.267  -0.178
+-0.089  -0.267  0.644  -0.222
+-0.133  -0.356  -0.444  0.733
 
-Approximate solution for F (up to 10 elements):
-[1.092, 1.315, 2.759, 6.222]
+Approximation of the vector F based on the linear system (first 10 elements shown):
+[14.902319902319901, 22.80952380952381, 32.494505494505496, 45.735042735042725]
+
+That's great!
 
 ## EXAMPLE 2 - INPUT
 
-Enter the integration interval as two numbers separated by a space (e.g., 0 1):
+Enter the integration interval as two numbers separated by a space, for example: 0 1
 0 1
-
-Enter the value of lambda (e.g., 0.5):
+Enter the value of lambda, for example: 0.5
 0.5
-
-Enter the number (integer) of points for discretization (e.g., 4):
+Enter the number (integer) of discretization points, for example: 100
 4
-
 Enter the kernel K(x, t), for example: x * t
 Press Enter to use the default value: K(x, t) = x * t
-[Press Enter]
-
-Enter the function g(x) (e.g., x^2):
+[Pressed Enter]
+Default value used: K(x, t) = x * t
+Enter the function g(x), for example: x^2
 Press Enter to use the default value: g(x) = x^2
-[Press Enter]
+[Pressed Enter]
+Default value used: g(x) = x^2
 
 ## EXAMPLE 2 - OUTPUT
 
-Discretized points of the interval (up to 10 elements):
-[0.0, 0.3333, 0.6667, 1.0]
+Discretized points of the interval (up to 10 elements shown):
+[0.0, 0.3333333333333333, 0.6666666666666666, 1.0]
 
-Kernel matrix (up to 5 x 5 elements):
+Kernel matrix (up to 5 x 5 elements shown):
 0.000  0.000  0.000  0.000
 0.000  0.111  0.222  0.333
 0.000  0.222  0.444  0.667
 0.000  0.333  0.667  1.000
 
-Weights vector (up to 10 elements):
-[0.1667, 0.3333, 0.3333, 0.1667]
+Weights vector (up to 10 elements shown):
+[0.16666666666666666, 0.3333333333333333, 0.3333333333333333, 0.16666666666666666]
 
-Weighted kernel matrix (up to 5 x 5 elements):
+Weighted kernel matrix (up to 5 x 5 elements shown):
 0.000  0.000  0.000  0.000
 0.000  0.037  0.074  0.056
 0.000  0.074  0.148  0.111
-0.000  0.056  0.111  0.167
+0.000  0.111  0.222  0.167
 
-Scaled kernel matrix by λ (up to 5 x 5 elements):
+Scaled kernel matrix by λ (up to 5 x 5 elements shown):
 0.000  0.000  0.000  0.000
 0.000  0.019  0.037  0.028
 0.000  0.037  0.074  0.056
-0.000  0.028  0.056  0.083
+0.000  0.056  0.111  0.083
 
-G vector (up to 10 elements):
-[0.000, 0.111, 0.444, 1.000]
+G vector (up to 10 elements shown):
+[0.0, 0.1111111111111111, 0.4444444444444444, 1.0]
 
-A matrix (up to 5 x 5 elements):
+Matrix A (up to 5 x 5 elements shown):
 1.000  0.000  0.000  0.000
-0.000  0.981 -0.037 -0.028
-0.000 -0.037  0.926 -0.056
-0.000 -0.028 -0.056  0.917
+0.000  0.981  -0.037  -0.028
+0.000  -0.037  0.926  -0.056
+0.000  -0.056  -0.111  0.917
 
-Approximate solution for F (up to 10 elements):
-[0.000, 0.113, 0.486, 1.115]
+Approximation of the vector F based on the linear system (first 10 elements shown):
+[0.0, 0.16729088639200998, 0.5568039950062422, 1.1685393258426966]
+
+That's great!
 
 ###
